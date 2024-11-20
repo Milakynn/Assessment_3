@@ -21,7 +21,7 @@ export function Register( props ) {
                             <Form.Label>Password</Form.Label>
                             <Form.Control name="password" type="password" placeholder="minimum 8 characters" required/>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Group className="mt-2 mb-1" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Check me out" />
                         </Form.Group>
                         <Button className="mt-3" variant="primary" type="submit">
