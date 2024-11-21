@@ -2,6 +2,7 @@ import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
+import { Client } from 'appwrite';
 import {Header} from './components/Header'
 import { Home } from './pages/Home'
 import { About } from './pages/About'
@@ -11,6 +12,9 @@ import { RedWine } from './pages/RedWine'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
+
+  const client = new Client();
+  client.setProject('673eab4d0018c64dc381');
 
   return (
     <>
