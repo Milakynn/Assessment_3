@@ -27,7 +27,7 @@ export function Header ( props ) {
                         <NavItem>
                             <NavDropdown href="/wine" title="Products" id="basic-nav-dropdown">
                                 <NavDropdown.Item as={Link} to="/red-wine">Red wine</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/White-wine">White wine</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/white-wine">White wine</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="new-trends">
                                     News & Trends
                                 </NavDropdown.Item>
@@ -49,7 +49,7 @@ export function Header ( props ) {
                                         <Form.Control type="text" placeholder="Search" className=" mr-sm-2"/>
                                     </Col>
                                     <Col xs="auto">
-                                        <Button type="submit">Submit</Button>
+                                        <Button variant="outline-primary" type="submit">Submit</Button>
                                     </Col>
                                 </Row>
                             </Form>

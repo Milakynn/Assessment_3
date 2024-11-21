@@ -3,9 +3,24 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
+// import InputGroup from 'react-bootstrap/InputGroup'
 
 export function Register( props ) {
     document.title = "Sign up to go"
+
+    // const [validated, setValidated] = useState(false);
+
+    // const handleSubmit = (event) => {
+    //     const form = event.currentTarget;
+    //     if (form.checkValidity() === false) {
+    //     event.preventDefault();
+    //     event.stopPropagation();
+    //     }
+
+    //     setValidated(true);
+    // };
+
+
     return (
         <Container>
             <Row>
@@ -24,7 +39,7 @@ export function Register( props ) {
                         <Form.Group className="mt-2 mb-1" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Check me out" />
                         </Form.Group>
-                        <Button className="mt-3" variant="primary" type="submit">
+                        <Button className="mt-3" variant="outline-info" type="submit">
                             Sing up
                         </Button>
                     </Form>
