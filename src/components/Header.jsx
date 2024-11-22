@@ -20,21 +20,21 @@ export function Header ( props ) {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="main-nav" />
                 <Navbar.Collapse id="main-nav">
-                    <Nav variant="underline" defaultActiveKey="/home">
+                    <Nav variant="underline" defaultActiveKey="/">
                         <NavItem>
-                            <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/">Home</Nav.Link>
                         </NavItem>
                         <NavItem>
                             <NavDropdown href="/wine" title="Products" id="basic-nav-dropdown">
                                 <NavDropdown.Item as={Link} to="/red-wine">Red wine</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/white-wine">White wine</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="new-trends">
+                                <NavDropdown.Item as={Link} to="/new-trends">
                                     News & Trends
                                 </NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="accessories">Accessories</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/accessories">Accessories</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item as={Link} to="sales-events">
-                                    Sales/Events
+                                <NavDropdown.Item as={Link} to="/sales-events">
+                                    Sales & Events
                                 </NavDropdown.Item>
                             </NavDropdown>
                         </NavItem>

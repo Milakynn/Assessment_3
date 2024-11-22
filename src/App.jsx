@@ -11,6 +11,9 @@ import { Register } from './pages/Register'
 import { RedWine } from './pages/RedWine'
 import { WhiteWine } from './pages/WhiteWine'
 import { Routes, Route } from 'react-router-dom'
+import { NewsTrends } from './pages/NewsTrends';
+import { Accessories } from './pages/Accessories';
+import { SalesEvents } from './pages/SalesEvents';
 
 function App() {
 
@@ -19,11 +22,24 @@ function App() {
 
   return (
     <>
+
+      <style type="text/css">
+        {`
+          body {
+            background-color: lavender;
+          }
+
+        `}
+      </style>
+
       <Header text="Red 4 U"/>
       <Routes>
-        <Route path='/home' element={ <Home/> }/>
+        <Route path='/' element={ <Home/> }/>
         <Route path='/red-wine' element={ <RedWine/> }/>
         <Route path='/white-wine' element={ <WhiteWine/> }/>
+        <Route path='/new-trends' element={ <NewsTrends/> }/>
+        <Route path='/accessories' element={ <Accessories/> }/>
+        <Route path='/sales-events' element={ <SalesEvents/> }/>
         <Route path='/about' element={ <About/> }/>
         <Route path='/login' element={ <Login/> }/>
         <Route path='/register' element={ <Register/> }/>

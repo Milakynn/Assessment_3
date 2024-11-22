@@ -25,7 +25,7 @@ export function Register( props ) {
         <Container>
             <Row>
             <h2 className="mt-4">Sign up</h2>
-                <Col md = {{ span: 4, offset: 4}}>
+                {/* <Col md = {{ span: 4, offset: 4}}> */}
                     <Form>
                         {/* <h2>Sign up</h2> */}
                         <Form.Group className="mt-2">
@@ -74,7 +74,7 @@ export function Register( props ) {
                             Sing up
                         </Button>
                     </Form>
-                </Col>
+                {/* </Col> */}
             </Row>
         </Container>
     )
