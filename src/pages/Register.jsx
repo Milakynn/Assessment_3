@@ -25,17 +25,23 @@ export function Register( props ) {
         <Container>
             <Row>
             <h2 className="mt-4">Sign up</h2>
-                {/* <Col md = {{ span: 4, offset: 4}}> */}
-                    <Form>
+                <Col md = {{ span: 7, offset: 2}}>
+                    <Form border="primary">
                         {/* <h2>Sign up</h2> */}
-                        <Form.Group className="mt-2">
-                            <Form.Label>First name</Form.Label>
-                            <Form.Control name="first name" type="text" placeholder="First name" required/>
-                        </Form.Group>
-                        <Form.Group className="mt-2">
-                            <Form.Label>Last name</Form.Label>
-                            <Form.Control name="Last name" type="text" placeholder="Last name" required/>
-                        </Form.Group>
+                        <Row>
+                            <Col md = {6}>
+                                <Form.Group className="mt-2">
+                                    <Form.Label>First name</Form.Label>
+                                    <Form.Control name="first name" type="text" placeholder="First name" required/>
+                                </Form.Group>
+                            </Col>
+                            <Col md = {6}>
+                                <Form.Group className="mt-2">
+                                    <Form.Label>Last name</Form.Label>
+                                    <Form.Control name="Last name" type="text" placeholder="Last name" required/>
+                                </Form.Group>
+                            </Col>
+                        </Row>
                         <Form.Group className="mt-2">
                             <Form.Label>Username</Form.Label>
                             <InputGroup hasValidation>
@@ -52,21 +58,27 @@ export function Register( props ) {
                             <Form.Label>Password</Form.Label>
                             <Form.Control name="password" type="password" placeholder="minimum 8 characters" required/>
                         </Form.Group>
-                        <Form.Group className="mt-2">
-                            <Form.Label>City</Form.Label>
-                            <Form.Control name="City" type="text" placeholder="City" required/>
-                        </Form.Group>
-                        <Form.Select className="mt-2" aria-label="Default select example">
-                            <option>Select a state</option>
-                            <option value="1">NT</option>
-                            <option value="2">QLD</option>
-                            <option value="3">NSW</option>
-                            <option value="4">ACT</option>
-                            <option value="5">VIC</option>
-                            <option value="6">SA</option>
-                            <option value="7">WA</option>
-                            <option value="8">TAS</option>
-                        </Form.Select>
+                        <Row className="align-middle">
+                            <Col md = {6}>
+                                <Form.Group className="mt-2">
+                                    <Form.Label>City</Form.Label>
+                                    <Form.Control name="City" type="text" placeholder="City" required/>
+                                </Form.Group>
+                            </Col>
+                            <Col md = {6}>
+                                <Form.Select className="mt-2" aria-label="Default select example" required>
+                                    <option>Select a state</option>
+                                    <option value="1">NT</option>
+                                    <option value="2">QLD</option>
+                                    <option value="3">NSW</option>
+                                    <option value="4">ACT</option>
+                                    <option value="5">VIC</option>
+                                    <option value="6">SA</option>
+                                    <option value="7">WA</option>
+                                    <option value="8">TAS</option>
+                                </Form.Select>
+                            </Col>
+                        </Row>
                         <Form.Group className="mt-2 mb-1" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Agree you are over 18 years old" feedback="You must agree before submitting" feedbackType="invalid" required/>
                         </Form.Group>
@@ -74,7 +86,7 @@ export function Register( props ) {
                             Sing up
                         </Button>
                     </Form>
-                {/* </Col> */}
+                </Col>
             </Row>
         </Container>
     )
