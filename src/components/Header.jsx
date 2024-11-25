@@ -11,8 +11,9 @@ import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom'
 
 export function Header ( props ) {
+
     return (
-        <Navbar expand="lg" bg="light">
+        <Navbar sticky="top" expand="lg" bg="light">
             <Container>
                 <Navbar.Brand href="/">
                 <img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top"/>{' '}
