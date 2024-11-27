@@ -2,7 +2,7 @@ import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
-import { Client } from 'appwrite';
+import { Client, Databases } from 'appwrite';
 import {Header} from './components/Header'
 import { Home } from './pages/Home'
 import { About } from './pages/About'
@@ -20,10 +20,12 @@ function App() {
 
   const client = new Client();
   client.setProject('673eab4d0018c64dc381');
+  client.setEndpoint("https://cloud.appwrite.io/v1")
+
+  const database = new Databases(Client);
 
   return (
     <>
-
       <style type="text/css">
         {`
           body {

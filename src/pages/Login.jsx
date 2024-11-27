@@ -19,7 +19,6 @@ export function Login( props ) {
             <h2 className="mt-4">Sign in</h2>
                 <Col md = {{ span: 4, offset: 4}}>
                     <Form>
-                        {/* <h2>Sign up</h2> */}
                         <Form.Group className="mt-2">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control name="email" type="email" placeholder="user@gmail.com" required/>
