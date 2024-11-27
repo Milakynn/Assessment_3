@@ -18,7 +18,10 @@ export function Home( props ) {
             <Card className="bg-dark text-black">
                 <Card.Img src="/images/bottles.jpg" alt="Card image" />
                 <Card.ImgOverlay>
-                    <Card.Title>The best drink in town !</Card.Title>
+                    <Card.Title>
+                        <img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top"/>{' '}
+                        The best drink in town !
+                    </Card.Title>
                     <Card.Text>
                     This is a wider card with supporting text below as a natural lead-in
                     to additional content. This content is a little bit longer.

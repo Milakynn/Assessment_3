@@ -16,7 +16,7 @@ export function Header ( props ) {
         <Navbar sticky="top" expand="lg" bg="light">
             <Container>
                 <Navbar.Brand href="/">
-                <img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top"/>{' '}
+                    <img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top"/>{' '}
                     { props.text }
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="main-nav" />
@@ -39,9 +39,11 @@ export function Header ( props ) {
                                 </NavDropdown.Item>
                             </NavDropdown>
                         </NavItem>
-                        {/* <Nav.Link href="/wines">Wines</Nav.Link> */}
                         <NavItem>
                             <Nav.Link as={Link} to="/about">Our history</Nav.Link>
+                        </NavItem>
+                        <NavItem>
+                            <Nav.Link as={Link} to="/contact">Contact us</Nav.Link>
                         </NavItem>
                         <NavItem>
                             <Form inline>

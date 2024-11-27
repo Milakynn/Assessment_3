@@ -5,18 +5,17 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import BreadcrumbItem from 'react-bootstrap/BreadcrumbItem'
 import { Link } from 'react-router-dom'
 
-export function SalesEvents( props ) {
-    document.title = "Special occassion!"
+export function Contact( props ) {
+    document.title = "Talk to us"
     return (
         <Container>
             <Breadcrumb className="mt-2">
                 <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/"}}>Home</Breadcrumb.Item>
-                <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/"}}>Products</Breadcrumb.Item>
-                <Breadcrumb.Item active>Sales & Events</Breadcrumb.Item>
+                <Breadcrumb.Item active>Contact us</Breadcrumb.Item>
             </Breadcrumb>
             <Row className="mt-5">
                 <Col>
-                    <h2>Sales & Events</h2>
+                    <h2>Contact us</h2>
                 </Col>
             </Row>
         </Container>

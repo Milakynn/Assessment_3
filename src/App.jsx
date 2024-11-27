@@ -14,6 +14,7 @@ import { Routes, Route } from 'react-router-dom'
 import { NewsTrends } from './pages/NewsTrends';
 import { Accessories } from './pages/Accessories';
 import { SalesEvents } from './pages/SalesEvents';
+import { Contact } from './pages/Contact';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
         <Route path='/accessories' element={ <Accessories/> }/>
         <Route path='/sales-events' element={ <SalesEvents/> }/>
         <Route path='/about' element={ <About/> }/>
+        <Route path='/contact' element={ <Contact/> }/>
         <Route path='/login' element={ <Login/> }/>
         <Route path='/register' element={ <Register/> }/>
       </Routes>

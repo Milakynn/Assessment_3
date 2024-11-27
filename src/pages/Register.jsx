@@ -4,6 +4,9 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 // import InputGroup from 'react-bootstrap/InputGroup'
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import BreadcrumbItem from 'react-bootstrap/BreadcrumbItem'
+import { Link } from 'react-router-dom'
 
 export function Register( props ) {
     document.title = "Sign up to go"
@@ -23,6 +26,10 @@ export function Register( props ) {
 
     return (
         <Container>
+            <Breadcrumb className="mt-2">
+                <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/"}}>Home</Breadcrumb.Item>
+                <Breadcrumb.Item active>Register</Breadcrumb.Item>
+            </Breadcrumb>
             <Row>
             <h2 className="mt-4">Sign up</h2>
                 <Col md = {{ span: 7, offset: 2}}>
@@ -66,7 +73,8 @@ export function Register( props ) {
                                 </Form.Group>
                             </Col>
                             <Col md = {6}>
-                                <Form.Select className="mt-2" aria-label="Default select example" required>
+                                <Form.Label className="mt-2">State</Form.Label>
+                                <Form.Select aria-label="Default select example" required>
                                     <option>Select a state</option>
                                     <option value="1">NT</option>
                                     <option value="2">QLD</option>
