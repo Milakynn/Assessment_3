@@ -65,6 +65,10 @@ export function Register( props ) {
                             <Form.Label>Password</Form.Label>
                             <Form.Control name="password" type="password" placeholder="minimum 8 characters" required/>
                         </Form.Group>
+                        <Form.Group className="mt-2">
+                            <Form.Label>Confirm password</Form.Label>
+                            <Form.Control name="password" type="password" placeholder="minimum 8 characters" required/>
+                        </Form.Group>
                         <Row className="align-middle">
                             <Col md = {6}>
                                 <Form.Group className="mt-2">
