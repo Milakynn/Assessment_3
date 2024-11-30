@@ -21,7 +21,7 @@ export function Header ( props ) {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="main-nav" />
                 <Navbar.Collapse id="main-nav">
-                    <Nav variant="underline" defaultActiveKey="/">
+                    <Nav variant="underline" defaultActiveKey="/" className="align-items-center">
                         <NavItem>
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
                         </NavItem>

@@ -3,81 +3,73 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Accordion from 'react-bootstrap/Accordion';
 import { Link } from 'react-router-dom'
-import { Query } from 'appwrite';
-import { useState, useEffect } from "react";
+// import { Query } from 'appwrite';
+// import { useState, useEffect } from "react";
 
 export function Home(props) {
-    const [data, setData] = useState([])
-    const [loaded, setLoaded] = useState(false)
+    // const [data, setData] = useState([])
+    // const [loaded, setLoaded] = useState(false)
 
-    document.title = "The best drinks in town"
+    // document.title = "The best drinks in town"
 
-    const database = props.db
-    const storage = props.st
+    // const database = props.db
+    // const storage = props.st
 
-    const getData = () => {
+    // const getData = () => {
 
-        let promise = database.listDocuments(
-            "6746c6fe002249f2cbb4",
-            "6746c70900389c12fa8e",
-            [
-                //Query.select(["name", "category"]),
-                Query.equal("featured", true)
-            ]
-        );
+    //     let promise = database.listDocuments(
+    //         "6746c6fe002249f2cbb4",
+    //         "6746c70900389c12fa8e",
+    //         [
+    //             //Query.select(["name", "category"]),
+    //             Query.equal("featured", true)
+    //         ]
+    //     );
 
-        promise.then(function (response) {
-            console.log(response);
-            setData(response.documents)
-        }, function (error) {
-            console.log(error);
-        });
+    //     promise.then(function (response) {
+    //         console.log(response);
+    //         setData(response.documents)
+    //     }, function (error) {
+    //         console.log(error);
+    //     });
 
-    }
-    useEffect( () => {
-        if(!loaded ) {
-            getData()
-           setLoaded(true)
-        }
-    }, [data])
-    console.log(loaded)
-    const Collection = data.map(
-        (wine) => {
-            const result = storage.getFileDownload('6746d6020019e2fe55d5', '6747f6980030cc9188fb', '6747f6a6003bb856337b');
-            return (
-                <Col>
-                    <Card border="info" >
-                        <Card.Header>
-                            <Card.Title>
-                                {wine.name}
-                            </Card.Title>
-                        </Card.Header>
-                        <Card.Body>
-                            <Card.Text>
-                                {wine.description}
-                            </Card.Text>
-                            <Button variant="outline-info" as={Link} to="/white-wine">Let's go find out more!</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            )
-        }
-    )
+    // }
+    // useEffect( () => {
+    //     if(!loaded ) {
+    //         getData()
+    //        setLoaded(true)
+    //     }
+    // }, [data])
+    // console.log(loaded)
+
+    // const Collection = data.map(
+    //     (wine) => {
+    //         const result = storage.getFileDownload('6746d6020019e2fe55d5', '6747f6980030cc9188fb', '6747f6a6003bb856337b');
+    //         return (
+    //             <Col>
+    //                 <Card border="info" >
+    //                     <Card.Header>
+    //                         <Card.Title>
+    //                             {wine.name}
+    //                         </Card.Title>
+    //                     </Card.Header>
+    //                     <Card.Body>
+    //                         <Card.Text>
+    //                             {wine.description}
+    //                         </Card.Text>
+    //                         <Button variant="outline-info" as={Link} to="/white-wine">Let's go find out more!</Button>
+    //                     </Card.Body>
+    //                 </Card>
+    //             </Col>
+    //         )
+    //     }
+    // )
 
     //const Collection = data.map( wine => console.log( wine.name ) )
 
-
-
-
     return (
         <Container>
-            {/* <Row>
-                <Col>
-                    <h2>Home</h2>
-                </Col>
-            </Row> */}
             <Card className="bg-dark text-black">
                 <Card.Img src="/images/bottles.jpg" alt="Card image" />
                 <Card.ImgOverlay>
@@ -120,9 +112,9 @@ export function Home(props) {
                     </Card>
                 </Col>
             </Row>
-            <Row>
+            {/* <Row>
                 {Collection}
-            </Row>
+            </Row> */}
         </Container>
     )
 

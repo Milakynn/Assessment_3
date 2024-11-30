@@ -8,7 +8,7 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import BreadcrumbItem from 'react-bootstrap/BreadcrumbItem'
 import { Link } from 'react-router-dom'
 
-export function Register( props ) {
+export function Register(props) {
     document.title = "Sign up to go"
 
     // const [validated, setValidated] = useState(false);
@@ -27,56 +27,88 @@ export function Register( props ) {
     return (
         <Container>
             <Breadcrumb className="mt-2">
-                <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/"}}>Home</Breadcrumb.Item>
+                <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/" }}>Home</Breadcrumb.Item>
                 <Breadcrumb.Item active>Register</Breadcrumb.Item>
             </Breadcrumb>
             <Row>
-            <h2 className="mt-4">Sign up</h2>
-                <Col md = {{ span: 7, offset: 2}}>
-                    <Form border="primary">
+                <h2 className="mt-4">Sign up</h2>
+                <Col md={{ span: 7, offset: 2 }}>
+                    <Form className="mb-5">
                         {/* <h2>Sign up</h2> */}
-                        <Row>
-                            <Col md = {6}>
-                                <Form.Group className="mt-2">
-                                    <Form.Label>First name</Form.Label>
-                                    <Form.Control name="first name" type="text" placeholder="First name" required/>
-                                </Form.Group>
-                            </Col>
-                            <Col md = {6}>
-                                <Form.Group className="mt-2">
-                                    <Form.Label>Last name</Form.Label>
-                                    <Form.Control name="Last name" type="text" placeholder="Last name" required/>
-                                </Form.Group>
-                            </Col>
-                        </Row>
                         <Form.Group className="mt-2">
                             <Form.Label>Username</Form.Label>
                             <InputGroup hasValidation>
                                 <InputGroup.Text id="inputGroupPretend">@</InputGroup.Text>
-                                <Form.Control name="User" type="text" placeholder="Username" aria-describedby="inputGroupPretend" required/>
+                                <Form.Control name="User" type="text" placeholder="Lindyrella11" aria-describedby="inputGroupPretend" required />
                                 <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
                             </InputGroup>
                         </Form.Group>
-                        <Form.Group className="mt-2">
-                            <Form.Label>Email address</Form.Label>
-                            <Form.Control name="email" type="email" placeholder="user@gmail.com" required/>
-                        </Form.Group>
-                        <Form.Group className="mt-2">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control name="password" type="password" placeholder="minimum 8 characters" required/>
-                        </Form.Group>
-                        <Form.Group className="mt-2">
-                            <Form.Label>Confirm password</Form.Label>
-                            <Form.Control name="password" type="password" placeholder="minimum 8 characters" required/>
-                        </Form.Group>
-                        <Row className="align-middle">
-                            <Col md = {6}>
+                        <Row>
+                            <Col md={6}>
                                 <Form.Group className="mt-2">
-                                    <Form.Label>City</Form.Label>
-                                    <Form.Control name="City" type="text" placeholder="City" required/>
+                                    <Form.Label>First name</Form.Label>
+                                    <Form.Control name="first name" type="text" placeholder="Lindsay" required />
                                 </Form.Group>
                             </Col>
-                            <Col md = {6}>
+                            <Col md={6}>
+                                <Form.Group className="mt-2">
+                                    <Form.Label>Last name</Form.Label>
+                                    <Form.Control name="Last name" type="text" placeholder="Kuilagi" required />
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                        <Form.Label className="mt-2">Gender</Form.Label>
+                        <Form.Select aria-label="Default select example" required>
+                            <option>-</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Non-binary</option>
+                            <option value="4">Prefer not to say</option>
+                        </Form.Select>
+                        <Form.Group className="mt-2">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control name="email" type="email" placeholder="user@gmail.com" required />
+                        </Form.Group>
+                        <Row className="align-middle">
+                            <Col md={6}>
+                                <Form.Group className="mt-2">
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control name="password" type="password" placeholder="minimum 8 characters" required />
+                                </Form.Group>
+                            </Col>
+                            <Col md={6}>
+                                <Form.Group className="mt-2">
+                                    <Form.Label>Confirm password</Form.Label>
+                                    <Form.Control name="password" type="password" placeholder="minimum 8 characters" required />
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                        <Form.Group className="mt-2">
+                            <Form.Label>Phone number</Form.Label>
+                            <Form.Control name="phone number" type="text" placeholder="0420-455-259" required />
+                        </Form.Group>
+                        <Row className="align-middle">
+                            <Col md={6}>
+                                <Form.Group className="mt-2">
+                                    <Form.Label>Address</Form.Label>
+                                    <Form.Control name="address" type="text" placeholder="18 Albert St" required />
+                                </Form.Group>
+                            </Col>
+                            <Col md={6}>
+                                <Form.Group className="mt-2">
+                                    <Form.Label>Suburb</Form.Label>
+                                    <Form.Control name="suburb" type="text" placeholder="Chastwood" required />
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                        <Row className="align-middle">
+                            <Col md={6}>
+                                <Form.Group className="mt-2">
+                                    <Form.Label>Post code</Form.Label>
+                                    <Form.Control name="post code" type="text" placeholder="2193" required />
+                                </Form.Group>
+                            </Col>
+                            <Col md={6}>
                                 <Form.Label className="mt-2">State</Form.Label>
                                 <Form.Select aria-label="Default select example" required>
                                     <option>Select a state</option>
@@ -92,11 +124,20 @@ export function Register( props ) {
                             </Col>
                         </Row>
                         <Form.Group className="mt-2 mb-1" controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="Agree you are over 18 years old" feedback="You must agree before submitting" feedbackType="invalid" required/>
+                            <Form.Check type="checkbox" label="Agree you are over 18 years old" feedback="You must agree before submitting" feedbackType="invalid" required />
                         </Form.Group>
-                        <Button className="mt-3" variant="outline-info" type="submit">
-                            Sing up
-                        </Button>
+                        <Row className="justify-content-center">
+                            <Col md={6}>
+                                <Button className="mt-3" variant="outline-info" type="submit">
+                                    Sing up
+                                </Button>
+                            </Col>
+                            <Col md={6}>
+                                <Button className="mt-3" variant="outline-info" type="reset">
+                                    Reset
+                                </Button>
+                            </Col>
+                        </Row>
                     </Form>
                 </Col>
             </Row>

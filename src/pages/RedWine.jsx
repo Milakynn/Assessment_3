@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom'
 
 export function RedWine( props ) {
     document.title = "Red like rouge"
+
     return (
         <Container>
             <Breadcrumb className="mt-2">
@@ -17,11 +18,6 @@ export function RedWine( props ) {
                 <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/"}}>Products</Breadcrumb.Item>
                 <Breadcrumb.Item active>Red wine</Breadcrumb.Item>
             </Breadcrumb>
-            {/* <Row className="mt-5">
-                <Col>
-                    <h2>Red wine</h2>
-                </Col>
-            </Row> */}
             <Card className="bg-dark text-black">
                 <Card.Img src="/images/bottles.jpg" alt="Card image" />
                 <Card.ImgOverlay>
