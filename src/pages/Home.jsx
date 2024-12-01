@@ -1,4 +1,4 @@
-import { Container } from "react-bootstrap";
+import { CardImgOverlay, Container } from "react-bootstrap";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button';
@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom'
 // import { Query } from 'appwrite';
 // import { useState, useEffect } from "react";
+import Carousel from 'react-bootstrap/Carousel';
 
 export function Home(props) {
     // const [data, setData] = useState([])
@@ -70,7 +71,36 @@ export function Home(props) {
 
     return (
         <Container>
-            <Card className="bg-dark text-black">
+            <Carousel>
+                <Carousel.Item>
+                    <img className="d-block w-100" src="/images/bottles.jpg" alt="First slide" />
+                    <CardImgOverlay></CardImgOverlay>
+                    <Carousel.Caption>
+                        <h3 className="bg-light-dark text-warning"><img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
+                            The best drink in town !</h3>
+                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img className="d-block w-100" src="/images/winery.jpg" alt="Second slide" />
+                    <Carousel.Caption>
+                        <h3 className="text-black"><img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
+                            The best drink in town !</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img className="d-block w-100" src="/images/party.jpg" alt="Third slide" />
+                    <Carousel.Caption>
+                        <h3 className="text-black"><img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
+                            The best drink in town !</h3>
+                        <p>
+                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        </p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+            {/* <Card className="bg-dark text-black">
                 <Card.Img src="/images/bottles.jpg" alt="Card image" />
                 <Card.ImgOverlay>
                     <Card.Title>
@@ -83,7 +113,7 @@ export function Home(props) {
                     </Card.Text>
                     <Card.Text>Last updated 3 mins ago</Card.Text>
                 </Card.ImgOverlay>
-            </Card>
+            </Card> */}
             <Row className="mt-5 mb-5">
                 <Col>
                     <Card border="info" >
