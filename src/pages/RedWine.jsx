@@ -8,28 +8,29 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import BreadcrumbItem from 'react-bootstrap/BreadcrumbItem'
 import { Link } from 'react-router-dom'
 
-export function RedWine( props ) {
+export function RedWine(props) {
     document.title = "Red like rouge"
 
     return (
         <Container>
             <Breadcrumb className="mt-2">
-                <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/"}}>Home</Breadcrumb.Item>
-                <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/"}}>Products</Breadcrumb.Item>
+                <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/" }}>Home</Breadcrumb.Item>
+                <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/" }}>Products</Breadcrumb.Item>
                 <Breadcrumb.Item active>Red wine</Breadcrumb.Item>
             </Breadcrumb>
-            <Card className="bg-dark text-black">
-                <Card.Img src="/images/bottles.jpg" alt="Card image" />
+            <Card className="bg-light text-danger">
+                <Card.Img src="/images/grape.jpg" alt="Card image" />
                 <Card.ImgOverlay>
                     <Card.Title>
-                        <img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top"/>{' '}
+                        <img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
                         The best drink in town !
                     </Card.Title>
-                    <Card.Text>
-                    This is a wider card with supporting text below as a natural lead-in
-                    to additional content. This content is a little bit longer.
-                    </Card.Text>
-                    <Card.Text>Last updated 3 mins ago</Card.Text>
+                    <Col md={4}>
+                        <Card.Text>
+                            Whether you're a seasoned connoisseur or just beginning to explore the world of wine, there's always something new to discover in a glass of red wine. Cheers! 🍷
+                        </Card.Text>
+                        <Card.Text>Last updated 3 mins ago</Card.Text>
+                    </Col>
                 </Card.ImgOverlay>
             </Card>
             <Row className="mt-5 mb-5">
@@ -39,21 +40,21 @@ export function RedWine( props ) {
                         <Card.Header><Card.Title>Red wine</Card.Title></Card.Header>
                         <Card.Body>
                             <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the card's content.
+                                Some quick example text to build on the card title and make up the
+                                bulk of the card's content.
                             </Card.Text>
                             <Button variant="outline-info">
                                 <Accordion>
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header>Read me ! </Accordion.Header>
                                         <Accordion.Body>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                            culpa qui officia deserunt mollit anim id est laborum.
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 </Accordion>

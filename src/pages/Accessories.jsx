@@ -17,18 +17,20 @@ export function Accessories(props) {
                 <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/" }}>Products</Breadcrumb.Item>
                 <Breadcrumb.Item active>Accessories</Breadcrumb.Item>
             </Breadcrumb>
-            <Card className="bg-dark text-black">
+            <Card className="bg-light text-danger">
                 <Card.Img src="/images/bottles.jpg" alt="Card image" />
                 <Card.ImgOverlay>
                     <Card.Title>
                         <img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
                         The best drink in town !
                     </Card.Title>
-                    <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in
-                        to additional content. This content is a little bit longer.
-                    </Card.Text>
-                    <Card.Text>Last updated 3 mins ago</Card.Text>
+                    <Col md={4}>
+                        <Card.Text>
+                            This is a wider card with supporting text below as a natural lead-in
+                            to additional content. This content is a little bit longer.
+                        </Card.Text>
+                        <Card.Text>Last updated 3 mins ago</Card.Text>
+                    </Col>
                 </Card.ImgOverlay>
             </Card>
             <Row className="mt-5 mb-5">

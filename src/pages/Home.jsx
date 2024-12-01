@@ -74,28 +74,26 @@ export function Home(props) {
             <Carousel>
                 <Carousel.Item>
                     <img className="d-block w-100" src="/images/bottles.jpg" alt="First slide" />
-                    <CardImgOverlay></CardImgOverlay>
-                    <Carousel.Caption>
-                        <h3 className="bg-light-dark text-warning"><img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
+                    <Carousel.Caption className="bg-light text-danger rounded" >
+                        <h3><img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
                             The best drink in town !</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <p>Wine is a timeless beverage, crafted from fermented grapes, that has been enjoyed by cultures around the world for centuries.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img className="d-block w-100" src="/images/winery.jpg" alt="Second slide" />
-                    <Carousel.Caption>
-                        <h3 className="text-black"><img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
+                    <Carousel.Caption className="bg-light text-danger rounded">
+                        <h3><img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
                             The best drink in town !</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>With its rich history and complex character, wine is a testament to the art and science of winemaking.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img className="d-block w-100" src="/images/party.jpg" alt="Third slide" />
-                    <Carousel.Caption>
-                        <h3 className="text-black"><img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
+                    <Carousel.Caption className="bg-light text-danger rounded">
+                        <h3><img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
                             The best drink in town !</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        <p>Wine is not just a drink; it's an experience that brings people together, enhances meals, and celebrates life's special moments.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
