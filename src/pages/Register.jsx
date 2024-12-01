@@ -62,16 +62,18 @@ export function Register(props) {
                                 </Form.Group>
                             </Col>
                         </Row>
-                        <Form.Label className="mt-2" controlId="validationCustomGender">Gender</Form.Label>
-                        <Form.Select aria-label="Default select example" required>
-                            <option>-</option>
-                            <option value="1">Male</option>
-                            <option value="2">Female</option>
-                            <option value="3">Non-binary</option>
-                            <option value="4">Prefer not to say</option>
-                        </Form.Select>
-                        <Form.Control.Feedback type="invalid">Please select an option.</Form.Control.Feedback>
-                        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
+                        <Form.Group className="mt-2" controlId="validationCustomGender">
+                            <Form.Label>Gender</Form.Label>
+                            <Form.Select aria-label="Default select example" required>
+                                <option>-</option>
+                                <option value="1">Male</option>
+                                <option value="2">Female</option>
+                                <option value="3">Non-binary</option>
+                                <option value="4">Prefer not to say</option>
+                            </Form.Select>
+                            <Form.Control.Feedback type="invalid">Please select an option.</Form.Control.Feedback>
+                            <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
+                        </Form.Group>
                         <Form.Group className="mt-2" controlId="validationCustomEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control name="email" type="email" placeholder="user@gmail.com" required />
@@ -130,20 +132,22 @@ export function Register(props) {
                                 </Form.Group>
                             </Col>
                             <Col md={6}>
-                                <Form.Label className="mt-2" controlId="validationCustomState">State</Form.Label>
-                                <Form.Select aria-label="Default select example" required>
-                                    <option>Select a state</option>
-                                    <option value="1">NT</option>
-                                    <option value="2">QLD</option>
-                                    <option value="3">NSW</option>
-                                    <option value="4">ACT</option>
-                                    <option value="5">VIC</option>
-                                    <option value="6">SA</option>
-                                    <option value="7">WA</option>
-                                    <option value="8">TAS</option>
-                                </Form.Select>
-                                <Form.Control.Feedback type="invalid">Please select an option.</Form.Control.Feedback>
-                                <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
+                                <Form.Group className="mt-2" controlId="validationCustomState">
+                                    <Form.Label>State</Form.Label>
+                                    <Form.Select aria-label="Default select example" required>
+                                        <option>Select a state</option>
+                                        <option value="1">NT</option>
+                                        <option value="2">QLD</option>
+                                        <option value="3">NSW</option>
+                                        <option value="4">ACT</option>
+                                        <option value="5">VIC</option>
+                                        <option value="6">SA</option>
+                                        <option value="7">WA</option>
+                                        <option value="8">TAS</option>
+                                    </Form.Select>
+                                    <Form.Control.Feedback type="invalid">Please select an option.</Form.Control.Feedback>
+                                    <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
+                                </Form.Group>
                             </Col>
                         </Row>
                         <Form.Group className="mt-2 mb-1" controlId="formBasicCheckbox">
