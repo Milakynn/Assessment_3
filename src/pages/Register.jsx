@@ -155,14 +155,16 @@ export function Register(props) {
                         </Form.Group>
                         <Row className="justify-content-center">
                             <Col md={6}>
-                                <Button className="mt-3" variant="outline-info" type="submit">
+                                <Button as="input" className="mt-3" type="submit" value="Sign up" variant="outline-info" />
+                                {/* <Button className="mt-3" variant="outline-info" type="submit">
                                     Sing up
-                                </Button>
+                                </Button> */}
                             </Col>
                             <Col md={6}>
-                                <Button className="mt-3" variant="outline-info" type="reset">
+                                <Button as="input" className="mt-3" type="reset" value="Reset" variant="outline-info" />
+                                {/* <Button className="mt-3" variant="outline-info" type="reset">
                                     Reset
-                                </Button>
+                                </Button> */}
                             </Col>
                         </Row>
                     </Form>
