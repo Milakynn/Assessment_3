@@ -8,6 +8,7 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import BreadcrumbItem from 'react-bootstrap/BreadcrumbItem'
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
+import Card from 'react-bootstrap/Card';
 
 export function Register(props) {
     document.title = "Sign up to go"
@@ -31,6 +32,20 @@ export function Register(props) {
                 <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/" }}>Home</Breadcrumb.Item>
                 <Breadcrumb.Item active>Register</Breadcrumb.Item>
             </Breadcrumb>
+            <Card className="bg-dark text-black">
+                <Card.Img src="/images/bottles.jpg" alt="Card image" />
+                <Card.ImgOverlay>
+                    <Card.Title>
+                        <img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top"/>{' '}
+                        The best drink in town !
+                    </Card.Title>
+                    <Card.Text>
+                    This is a wider card with supporting text below as a natural lead-in
+                    to additional content. This content is a little bit longer.
+                    </Card.Text>
+                    <Card.Text>Last updated 3 mins ago</Card.Text>
+                </Card.ImgOverlay>
+            </Card>
             <Row>
                 <h2 className="mt-4">Sign up</h2>
                 <Col md={{ span: 7, offset: 2 }}>
@@ -153,7 +168,7 @@ export function Register(props) {
                         <Form.Group className="mt-2 mb-1" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Agree you are over 18 years old" feedback="You must agree before submitting" feedbackType="invalid" required />
                         </Form.Group>
-                        <Row className="justify-content-center">
+                        <Row className="align-items-center">
                             <Col md={6}>
                                 <Button as="input" className="mt-3" type="submit" value="Sign up" variant="outline-info" />
                                 {/* <Button className="mt-3" variant="outline-info" type="submit">
