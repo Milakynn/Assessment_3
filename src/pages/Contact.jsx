@@ -82,9 +82,10 @@ export function Contact(props) {
                             <Form.Control name="Message" as="textarea" placeholder="Leave your comment here..." style={{ height: '160px' }} required />
                             <Form.Control.Feedback type="invalid">Please write us a message.</Form.Control.Feedback>
                         </Form.Group>
-                        <Button className="mt-3" variant="outline-info" type="submit">
+                        <Button as="input" className="mt-3" type="submit" value="Send" variant="outline-info" />
+                        {/* <Button className="mt-3" variant="outline-info" type="submit">
                             Sing up
-                        </Button>
+                        </Button> */}
                     </Form>
                 </Col>
             </Row>

@@ -64,9 +64,10 @@ export function Login(props) {
                         <Form.Group className="mt-2 mb-1" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" id="autoSizingCheck" label="Remember me" />
                         </Form.Group>
-                        <Button className="mt-3" variant="outline-info" type="submit">
+                        <Button as="input" className="mt-3" type="submit" value="Sign up" variant="outline-info" />
+                        {/* <Button className="mt-3" variant="outline-info" type="submit">
                             Sing up
-                        </Button>
+                        </Button> */}
                     </Form>
                 </Col>
             </Row>
