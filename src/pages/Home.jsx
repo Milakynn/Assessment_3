@@ -4,70 +4,58 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom'
-// import { Query } from 'appwrite';
-// import { useState, useEffect } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 
+import { Query } from 'appwrite';
+import { useState, useEffect } from "react";
+
 export function Home(props) {
-    // const [data, setData] = useState([])
-    // const [loaded, setLoaded] = useState(false)
+    const [data, setData] = useState([])
+    const [loaded, setLoaded] = useState(false)
 
-    // document.title = "The best drinks in town"
+    document.title = "The best drinks in town"
 
-    // const database = props.db
-    // const storage = props.st
+    const database = props.db
+    const storage = props.str
 
-    // const getData = () => {
+    //function to get data
+    const getData = async () => {
 
-    //     let promise = database.listDocuments(
-    //         "6746c6fe002249f2cbb4",
-    //         "6746c70900389c12fa8e",
-    //         [
-    //             //Query.select(["name", "category"]),
-    //             Query.equal("featured", true)
-    //         ]
-    //     );
+        const result = await database.listDocuments(
+            '6746c6fe002249f2cbb4', // database ID
+            '6746c70900389c12fa8e', // collection ID
+            []
 
-    //     promise.then(function (response) {
-    //         console.log(response);
-    //         setData(response.documents)
-    //     }, function (error) {
-    //         console.log(error);
-    //     });
+        )
 
-    // }
-    // useEffect( () => {
-    //     if(!loaded ) {
-    //         getData()
-    //        setLoaded(true)
-    //     }
-    // }, [data])
-    // console.log(loaded)
+        setData(result.documents)
+        setLoaded(true)
+    }
 
-    // const Collection = data.map(
-    //     (wine) => {
-    //         const result = storage.getFileDownload('6746d6020019e2fe55d5', '6747f6980030cc9188fb', '6747f6a6003bb856337b');
-    //         return (
-    //             <Col>
-    //                 <Card border="info" >
-    //                     <Card.Header>
-    //                         <Card.Title>
-    //                             {wine.name}
-    //                         </Card.Title>
-    //                     </Card.Header>
-    //                     <Card.Body>
-    //                         <Card.Text>
-    //                             {wine.description}
-    //                         </Card.Text>
-    //                         <Button variant="outline-info" as={Link} to="/white-wine">Let's go find out more!</Button>
-    //                     </Card.Body>
-    //                 </Card>
-    //             </Col>
-    //         )
-    //     }
-    // )
+    useEffect(() => { getData() }, [data])
 
-    //const Collection = data.map( wine => console.log( wine.name ) )
+    const ProductCollection = data.map((wine) => {
+        // get preview of image
+        const imgURL = storage.getFileView(
+            '6746d6020019e2fe55d5',// bucket ID
+            wine.image // file ID
+        )
+        // return each product as Col
+        return (
+            <Col className="mt-4 mb-4" md={4}>
+                <Card border="info">
+                    <Card.Img className="img-fluid" src={ imgURL } />
+                    <Card.Header>
+                        <Card.Title>{wine.name}</Card.Title>
+                    </Card.Header>
+                    <Card.Body>
+                        <h5>{wine.price}</h5>
+                        <Card.Text>{wine.description}</Card.Text>
+                    </Card.Body>
+                </Card>
+            </Col>
+        )
+    })
 
     return (
         <Container>
@@ -98,20 +86,11 @@ export function Home(props) {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-            {/* <Card className="bg-dark text-black">
-                <Card.Img src="/images/bottles.jpg" alt="Card image" />
-                <Card.ImgOverlay>
-                    <Card.Title>
-                        <img alt="logo" src="/public/images/wine-glass.png" width="30" height="30" className="d-inline-block align-top" />{' '}
-                        The best drink in town !
-                    </Card.Title>
-                    <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in
-                        to additional content. This content is a little bit longer.
-                    </Card.Text>
-                    <Card.Text>Last updated 3 mins ago</Card.Text>
-                </Card.ImgOverlay>
-            </Card> */}
+
+            <Row>
+                {ProductCollection}
+            </Row>
+            
             <Row className="mt-5 mb-5">
                 <Col>
                     <Card border="info" >
@@ -140,9 +119,6 @@ export function Home(props) {
                     </Card>
                 </Col>
             </Row>
-            {/* <Row>
-                {Collection}
-            </Row> */}
         </Container>
     )
 

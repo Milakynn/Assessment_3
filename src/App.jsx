@@ -2,7 +2,7 @@ import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
-import { Client, Databases, Storage } from 'appwrite';
+import { Client, Account, Databases, Storage } from 'appwrite';
 import {Header} from './components/Header'
 import { Home } from './pages/Home'
 import { About } from './pages/About'
@@ -18,16 +18,12 @@ import { Contact } from './pages/Contact';
 
 function App() {
 
-  // const client = new Client();
-  // client.setProject('673eab4d0018c64dc381');
-  // client.setEndpoint("https://cloud.appwrite.io/v1")
+  const client = new Client();
+  client.setProject('673eab4d0018c64dc381');
+  client.setEndpoint("https://cloud.appwrite.io/v1")
 
-  const client = new Client()
-    .setEndpoint('https://cloud.appwrite.io/v1')
-    .setProject('673eab4d0018c64dc381')
-
+  const account = new Account(client);
   const database = new Databases(client);
-
   const storage = new Storage(client);
 
   return (
@@ -43,7 +39,7 @@ function App() {
 
       <Header text="Red 4 U"/>
       <Routes>
-        <Route path='/' element={ <Home db={database} st={storage}/> }/>
+        <Route path='/' element={ <Home db={database} str={storage}/> }/>
         <Route path='/red-wine' element={ <RedWine/> }/>
         <Route path='/white-wine' element={ <WhiteWine/> }/>
         <Route path='/new-trends' element={ <NewsTrends/> }/>
