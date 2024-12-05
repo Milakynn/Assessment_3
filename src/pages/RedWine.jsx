@@ -9,6 +9,7 @@ import BreadcrumbItem from 'react-bootstrap/BreadcrumbItem'
 import { Link } from 'react-router-dom'
 
 export function RedWine(props) {
+
     document.title = "Red like rouge"
 
     return (
@@ -33,7 +34,8 @@ export function RedWine(props) {
                     </Col>
                 </Card.ImgOverlay>
             </Card>
-            <Row className="mt-5 mb-5">
+
+            {/* <Row className="mt-5 mb-5">
                 <Col>
                     <Card border="info">
                         <Card.Img variant="top" src="/images/red.jpg" />
@@ -62,7 +64,7 @@ export function RedWine(props) {
                         </Card.Body>
                     </Card>
                 </Col>
-            </Row>
+            </Row> */}
         </Container>
     )
 }

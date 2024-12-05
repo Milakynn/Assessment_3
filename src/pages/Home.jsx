@@ -49,7 +49,8 @@ export function Home(props) {
                         <Card.Title>{wine.name}</Card.Title>
                     </Card.Header>
                     <Card.Body>
-                        <h5>{wine.price}</h5>
+                        <h5>${wine.price}</h5>
+                        <h4>{wine.category}</h4>
                         <Card.Text>{wine.description}</Card.Text>
                     </Card.Body>
                 </Card>
@@ -89,35 +90,6 @@ export function Home(props) {
 
             <Row>
                 {ProductCollection}
-            </Row>
-            
-            <Row className="mt-5 mb-5">
-                <Col>
-                    <Card border="info" >
-                        <Card.Img variant="top" src="/images/red.jpg" />
-                        <Card.Header><Card.Title>Red wine</Card.Title></Card.Header>
-                        <Card.Body>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
-                            </Card.Text>
-                            <Button variant="outline-info" as={Link} to="/red-wine">Let's go find out more!</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card border="info" >
-                        <Card.Img variant="top" src="/images/white.jpg" />
-                        <Card.Header><Card.Title>White wine</Card.Title></Card.Header>
-                        <Card.Body>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
-                            </Card.Text>
-                            <Button variant="outline-info" as={Link} to="/white-wine">Let's go find out more!</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
             </Row>
         </Container>
     )
